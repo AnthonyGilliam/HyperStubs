@@ -49,6 +49,7 @@ namespace HyperStubs.Tests.StubServiceBasicObjectTests
             Assert.NotNull(person.House);
             Assert.That(person.House.Bathrooms != 0);
             Assert.That(person.House.Floors != 0);
+            Assert.That(person.House.SquareFeet != 0);
         }
 
         [Test]

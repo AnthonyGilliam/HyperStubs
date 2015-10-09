@@ -147,10 +147,10 @@ namespace HyperStubs.Random
 
         public static decimal RandomDecimal(short min, short max, short? percision = null)
         {
-            var left = RandomShort();
+            var left = RandomShort(min, max);
             var right = percision < 5
                     ? RandomShort(0, (short)(percision * 10 - 1))
-                    : RandomShort();
+                    : RandomShort(0, short.MaxValue);
             decimal value;
 
             unchecked
