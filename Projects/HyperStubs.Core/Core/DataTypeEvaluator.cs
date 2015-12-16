@@ -91,6 +91,19 @@ namespace HyperStubs.Core
             return Randomizer.RandomDecimal();
         }
 
+        public static DateTime EvaluateDateTime(string propertyFieldName)
+        {
+            propertyFieldName = propertyFieldName.ToUpper();
+
+            if (propertyFieldName.Contains("BIRTH")
+                || propertyFieldName == "DOB"
+                || propertyFieldName =="DEATH"
+                || propertyFieldName == "DATE OF DEATH")
+                return Randomizer.RandomBirthDate();
+
+            return Randomizer.RandomDate();
+        }
+
         public static object GenerateStubObject(Type type, StubDataType stubDataType)
         {
             object stubObject = null;

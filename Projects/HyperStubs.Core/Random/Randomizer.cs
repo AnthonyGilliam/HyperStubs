@@ -116,7 +116,7 @@ namespace HyperStubs.Random
 
         public static DateTime RandomBirthDate()
         {
-            DateTime rndmBirthDate = RandomDate(1930, 1990);
+            DateTime rndmBirthDate = RandomDate(1930, 2000);
 
             return rndmBirthDate;
         }

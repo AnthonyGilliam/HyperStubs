@@ -1,4 +1,5 @@
-﻿using HyperStubs.Tests.Models;
+﻿using System;
+using HyperStubs.Tests.Models;
 using NUnit.Framework;
 
 namespace HyperStubs.Tests.StubServiceBasicObjectTests
@@ -19,6 +20,7 @@ namespace HyperStubs.Tests.StubServiceBasicObjectTests
             Assert.That(!string.IsNullOrWhiteSpace(person.NickName));
             Assert.That(!string.IsNullOrWhiteSpace(person.PhoneNumber));
             Assert.That(person.Age != 0);
+            Assert.That(person.DateOfBirth > new DateTime(1930, 1, 1) && person.DateOfBirth < new DateTime(1999, 12, 31));
         }
     }
 

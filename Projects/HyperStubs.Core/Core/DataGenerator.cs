@@ -327,7 +327,7 @@ namespace HyperStubs.Core
                         stubObject = Randomizer.RandomChar(true);
                         break;
                     case "DateTime":
-                        stubObject = Randomizer.RandomDate();
+                        stubObject = DataTypeEvaluator.EvaluateDateTime(property_field_Name);
                         break;
                     case "Decimal":
                         stubObject = DataTypeEvaluator.EvaluateDecimal(property_field_Name);
